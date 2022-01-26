@@ -15,3 +15,6 @@ let number = parseInt("42"); // returns integer 42
 let pi = parseFloat("3.14"); // return float 3.14
 let d = Number("2"); // return integer 2;
 let f = Number("3.14"); // return float 3.14
+
+// Convert to string
+let secretOfLife = 42 + ""; // shortest way to convert to string
