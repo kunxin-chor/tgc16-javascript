@@ -2,7 +2,7 @@ const prompt = require('prompt-sync')();
 
 // an optional argument has a default value
 // if gstPercentage is not given a value, then it defaults to 0.07
-function calculateWithGST(bill, gstPercentage=0.07) {
+function calculateWithGST(bill, gstPercentage=0.07, a=3) {
     let gst = bill * gstPercentage;
     let total = bill + gst;
     return total;
