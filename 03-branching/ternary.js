@@ -35,3 +35,5 @@ console.log( number % 2 == 0 ? "Even" : "Odd");
 // => console.log (false ? "Even" : "Odd")
 // => console.log("Odd");
 
+let alphabet = "A";
+console.log ( alphabet == "A" ? "apple" : alphabet == "B" ? "banana" : "not recongized")

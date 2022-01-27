@@ -10,5 +10,9 @@ name = name || "N/A";
 // name = "" || "N/A"
 // name = "N/A"
 
+// if the user enters "ahkow" for name
+// name = "ahkow" || "N/A"
+// name = "ahkow"
+
 console.log("1 && 2 =>", 1 && 2);
 console.log("1 && null =>", 1 && null);
