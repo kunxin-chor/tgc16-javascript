@@ -27,3 +27,15 @@ there will be a 10% late charge, which will be ${bill * 0.1}
 ${n}
 `;
 console.log(formLetter);
+
+let fruits = "bananas";
+console.log("fruits[1] =>", fruits[1]);
+
+let numbers=[1,3,5,7,9];
+numbers[0] = -99;
+console.log(numbers);
+
+fruits[0] = 'z'; // strings are immutable!
+                 // which means we cannot change individuals
+                // characters in the string via index.
+console.log(fruits);
