@@ -33,9 +33,10 @@ let recipe = {
 // different from Python dictionaries, Objects in javascript can store functions
 let spaceship = {
     speed: 10,
+    // a function inside an object is known as a method
     calculateDistanceTravelled: function(time){
         console.log("attempting to calculate distance travelled");
-        return thisspeed * time;
+        return this.speed * time;
     }
 }
 
@@ -50,3 +51,42 @@ let starDestroyer = {
 console.log(spaceship.speed);
 console.log(`spaceship.calculateDistanceTravelled() => `, spaceship.calculateDistanceTravelled(10));
 console.log(`starDestroyer.calculateDistanceTravelled() =>`,starDestroyer.calculateDistanceTravelled(10));
+
+// create an empty object
+let employeeRecord = {
+    firstName:'Tan'
+};
+
+// add in a last name property  (warning: will not work in strict mode)
+employeeRecord.lastName = "Ah Kow";
+employeeRecord.getName = function() {  // functions are references, so they can be assigned to variables/properties
+    return this.firstName + " " + this.lastName;
+}
+console.log('employeeRecord =>', employeeRecord);
+console.log('employeeRecord.getName() =>', employeeRecord.getName());
+
+// primitive - integers, floats, booleans, strings* (strings despite being objects, they are immutable -- they act the same as primitives)
+// reference - objects, functions, arrays
+let o1 = {
+    'count': 14,
+    'name':'o1'
+};
+
+let o2 = o1;  // we're not making an exact copy of the object
+              // we're simply copying the reference from o1 into o2
+
+o1.count = 15;
+console.log('o1.count =>', o1.count);
+console.log('o2.count =>', o2.count);
+
+// how do we know if a property exists in an object?
+let food = {
+    "a":"apple pie",
+    "b":"bak gua",
+    "c":"cheese cake",
+    "r":'roti prata',
+    'p':'pineapple tart'
+}
+console.log(`'a' in food =>`,'a' in food);
+console.log(`'d' in food =>`, 'd' in food);
+console.log(` food.hasOwnProperty('p')=>`, food.hasOwnProperty('p'));
