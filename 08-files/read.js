@@ -10,4 +10,6 @@ let data = fs.readFileSync('data.txt');
 
 // convert the raw data to string
 let text = data.toString();
-console.log(text);
+// seperate each line into one element in the array
+let lines = text.split('\n');
+console.log(lines[3]);
