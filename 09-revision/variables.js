@@ -17,8 +17,8 @@ let f = function(x) {
 }
 
 /* how assignment works depends on if the value is a primitive or a reference */
-let a = 3;
-let b = a + 3;
+let a1 = 3;
+let b = a1 + 3;
 // => b = 3 + 3
 // => b = 6
 
@@ -26,3 +26,5 @@ let b = a + 3;
 // the reference that got assigned
 let g = f;
 // g and f are now both referring to the same function
+
+console.log("parseInt('AB') =>", parseInt('AB'));
