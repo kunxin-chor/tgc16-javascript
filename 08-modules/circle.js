@@ -2,6 +2,8 @@
 // when we importing from 
 // a module that we install via
 // yarn add, don't put ./ in front
+// by default, when we require in something
+// nodejs will look for in the node_modules directory
 const prompt = require('prompt-sync')();
 
 // when we importing from our own
